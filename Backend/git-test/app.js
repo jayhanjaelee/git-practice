@@ -31,7 +31,9 @@ app.get('/ping', (req, res) => {
 feature/signin 브랜치의 경우 app.post('/users/signin', ...)
 feature/signup 브랜치의 경우 app.post('/users/signup', ...)
 */
-
+app.post('/users/signup', (req, res) => {
+  res.json({ message: 'signup' })
+})
 
 app.listen(PORT, () => {
   myDataSource.initialize()
